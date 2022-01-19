@@ -1,0 +1,41 @@
+{
+    "baza": [
+        {
+            "categories": [
+                "pogoda"
+            ]
+        },
+        {
+            "pogoda": {
+                "keywords":
+                    [
+                        "pogoda",
+                        "temepratura",
+                        "pogode",
+                        "prognoza"
+                    ],
+                "children": [
+                    {
+                        "@name": "dzisiaj",
+                        "keywords": [
+                            "dzisiaj",
+                            "dzisiejszy",
+                            "dzisiejsza",
+                            "dzis"
+                        ],
+                        "odpowiedz": "pogoda na dzis: dwadzieścia stopni, słonecznie"
+                    },
+                    {
+                        "@name": "jutro",
+                        "keywords": [
+                            "jutro",
+                            "jutrzejsza",
+                            "jutrzejszy"
+                        ],
+                        "odpowiedz": "pogoda na jutro: minus dwa stopnie, śnieg"
+                    }
+                ]
+            }
+        }
+    ]
+}
