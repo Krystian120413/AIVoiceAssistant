@@ -49,7 +49,7 @@ while True:
             elif len(ifInclude(text, FIND_WHO)):
                 print(answer_Who)
                 speak(answer_Who)
-            elif len(ifInclude(text, "zakończ")):
+            elif len(ifInclude(text, ["zakończ"])):
                 print("Do zobaczenia")
                 speak("Do zobaczenia")
                 break
@@ -57,6 +57,6 @@ while True:
                 print("Przykro mi, ale nie mogę odpowiedzieć na to pytanie.")
                 speak("Przykro mi, ale nie mogę odpowiedzieć na to pytanie.")
 
-    except speech_recognition.UnknownValueError():
+    except speech_recognition.UnknownValueError:
         recognizer = speech_recognition.Recognizer()
         continue
