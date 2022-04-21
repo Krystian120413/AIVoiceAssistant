@@ -1,5 +1,6 @@
 import speech_recognition
 import pyttsx3 as tts
+from logic import conversation
 
 recognizer = speech_recognition.Recognizer()
 
@@ -42,6 +43,9 @@ while True:
             text = recognizer.recognize_google(audio, language='pl-PL')
             text = text.lower()
 
+            conversation(text)
+
+            '''
             print(f"Rozpoznano: {text}")
             if len(ifInclude(text, FIND_GREETING)):
                 print(answer_Greeting)
@@ -56,6 +60,7 @@ while True:
             else:
                 print("Przykro mi, ale nie mogę odpowiedzieć na to pytanie.")
                 speak("Przykro mi, ale nie mogę odpowiedzieć na to pytanie.")
+            '''
 
     except speech_recognition.UnknownValueError:
         recognizer = speech_recognition.Recognizer()
